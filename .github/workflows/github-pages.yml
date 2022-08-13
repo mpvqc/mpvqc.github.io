@@ -10,13 +10,11 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: 'Checkout Repository'
-        uses: actions/checkout@v3
-        with:
-          submodules: recursive  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
-      - name: 'Checkout Theme'
+        uses: actions/checkout@v2
+      - name: 'Update Theme'
         run: |
           function execute() { echo -e "\033[0;34m$*\033[0m"; "$@"; }
+          execute git submodule update --init --recursive
           execute tree
       - name: 'Setup Hugo'
         uses: peaceiris/actions-hugo@v2
@@ -24,7 +22,9 @@ jobs:
           hugo-version: 'latest'
           extended: true
       - name: 'Build'
-        run: hugo --minify
+        run: |
+          function execute() { echo -e "\033[0;34m$*\033[0m"; "$@"; }
+          execute hugo --minify
       - name: 'Deploy'
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
