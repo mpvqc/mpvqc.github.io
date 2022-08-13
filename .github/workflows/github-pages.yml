@@ -12,12 +12,11 @@ jobs:
       - name: 'Checkout Repository'
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: recursive  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
       - name: 'Checkout Theme'
         run: |
           function execute() { echo -e "\033[0;34m$*\033[0m"; "$@"; }
-          execute git submodule update --init --recursive
-          execute ls -R
           execute tree
       - name: 'Setup Hugo'
         uses: peaceiris/actions-hugo@v2
