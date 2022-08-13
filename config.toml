@@ -1,4 +1,40 @@
-baseURL = 'http://example.org/'
+baseURL = '/'
 languageCode = 'en-us'
-title = 'mpvQC'
 theme = 'hello-friend'
+title = 'mpvQC'
+subtitle = ""
+copyright = "&copy; mpvQC developers - powered by hugo and hello-friend"
+keywords = ""
+menuMore = "Show more"
+writtenBy = "Written by"
+readMore = "Read more"
+readOtherPosts = "Read other posts"
+newerPosts = "Newer posts"
+olderPosts = "Older posts"
+minuteReadingTime = "min read"
+dateFormatSingle = "2006-01-02"
+dateFormatList = "2006-01-02"
+
+rssFullText = true          # Show full page content in RSS feed items
+                            # (default is Description or Summary metadata in the front matter)
+
+contentTypeName = "posts"   # dir name of your blog content (default is `content/posts`).
+                            # the list of set content will show up on your index page (baseurl).
+
+defaultTheme = "dark"       # OS theme is default when not provided, but you can force it to "light" or "dark"
+showMenuItems = 2           # if you set this to 0, only submenu trigger will be visible
+showReadingTime = false     # Show reading time in minutes for posts
+
+[params.logo]
+path = "/img/logo.svg"
+alt = "Your example logo alt text"
+logoHomeLink = "/"
+
+[[menu.main]]
+name = "Source"
+url = "https://github.com/mpvqc/mpvQC"
+weight = 1
+[[menu.main]]
+name = "Issue Tracker"
+url = "https://github.com/mpvqc/mpvQC/issues"
+weight = 2
