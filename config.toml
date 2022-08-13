@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://mpvqc.github.io'
 languageCode = 'en-us'
 theme = 'hello-friend'
 title = 'mpvQC'
