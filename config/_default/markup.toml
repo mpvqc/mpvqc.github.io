@@ -1,0 +1,9 @@
+defaultMarkdownHandler = "goldmark"
+
+# Configuration for Goldmark markdown processor
+# https://gohugo.io/getting-started/configuration-markup/#configure-markup
+[goldmark]
+  [goldmark.parser]
+    autoHeadingID = false
+  [goldmark.renderer]
+    unsafe = true

@@ -27,7 +27,7 @@ showReadingTime = false     # Show reading time in minutes for posts
 
 [params.logo]
 path = "/img/logo.svg"
-alt = "Your example logo alt text"
+alt = "logo"
 logoHomeLink = "/"
 
 [[menu.main]]
