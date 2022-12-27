@@ -4,7 +4,7 @@ date: 2020-09-30T00:00:00+02:00
 draft: false
 ---
 
-{{< image src="/img/screenshot.png" alt="Hello Friend" position="center" style="width:720px;" >}}
+{{< image src="/img/screenshot-0.7.0.png" alt="Hello Friend" position="center" style="width:720px;" >}}
 
 # mpvQC v0.8.0 (WIP)
 
