@@ -15,6 +15,7 @@ minuteReadingTime = "min read"
 dateFormatSingle = "2006-01-02"
 dateFormatList = "2006-01-02"
 disableKinds = ["RSS"]
+enableRobotsTXT = true
 
 contentTypeName = "posts"   # dir name of your blog content (default is `content/posts`).
                             # the list of set content will show up on your index page (baseurl).
