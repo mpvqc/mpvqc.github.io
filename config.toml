@@ -2,7 +2,6 @@ baseURL = 'https://mpvqc.github.io'
 languageCode = 'en-us'
 theme = 'hello-friend'
 title = 'mpvQC'
-subtitle = ""
 copyright = "&copy; mpvQC developers - powered by hugo and hello-friend"
 keywords = ""
 menuMore = "Show more"
@@ -23,6 +22,11 @@ contentTypeName = "posts"   # dir name of your blog content (default is `content
 defaultTheme = "dark"       # OS theme is default when not provided, but you can force it to "light" or "dark"
 showMenuItems = 2           # if you set this to 0, only submenu trigger will be visible
 showReadingTime = false     # Show reading time in minutes for posts
+
+[params]
+    subtitle = 'libmpv based application for quality control of videos'
+    summary = 'libmpv based application for quality control of videos'
+    description = 'libmpv based application for quality control of videos'
 
 [params.logo]
 path = "/img/logo.svg"
