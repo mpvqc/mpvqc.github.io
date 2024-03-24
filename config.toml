@@ -2,7 +2,7 @@
 # Set to the URL for your site
 baseURL = "https://mpvqc.github.io"
 
-# The name of this wonderful theme ;-).
+# The name of this theme: https://themes.gohugo.io/themes/hugo-bearblog/
 theme = 'hugo-bearblog'
 
 # Basic metadata configuration for your blog.
