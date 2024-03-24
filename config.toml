@@ -1,6 +1,6 @@
 baseURL = 'https://mpvqc.github.io'
 languageCode = 'en-us'
-theme = 'hello-friend'
+#theme = 'hello-friend'
 title = 'mpvQC'
 copyright = "&copy; mpvQC developers - powered by hugo and hello-friend"
 keywords = ""
