@@ -5,11 +5,13 @@
 title = "mpvQC"
 +++
 
-![A screenshot of the latest version](/images/screenshot.png)
+{{<figure-dynamic
+    dark-src="/images/mpvQC-dark.png" 
+    light-src="/images/mpvQC-light.png"  
+    alt="Screenshot of application"
+>}}
 
-# mpvQC
-
-A libmpv-based application for quick and easy creation of video file quality control reports.
+mpvQC is a libmpv-based application for quick and easy creation of video file quality control reports.
 
 Current Version: [v0.9.0-beta](https://github.com/mpvqc/mpvQC/releases/tag/0.9.0-beta)
 
