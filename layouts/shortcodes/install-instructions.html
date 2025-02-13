@@ -1,0 +1,65 @@
+<style>
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .column {
+        flex: 1;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+        .column {
+            flex-basis: 100%; /* Stacks columns on smaller screens */
+        }
+    }
+</style>
+<div class="container">
+    <div class="column">
+        <h2>
+            <picture>
+                <!-- https://www.svgrepo.com/svg/232490/windows-operating-system -->
+                <source height="40"
+                        width="40"
+                        srcset="/images/windows-logo-dark.svg"
+                        media="(prefers-color-scheme: dark)">
+                <img height="40"
+                     width="40"
+                     src="/images/windows-logo-light.svg"
+                     style="vertical-align: middle;"
+                     alt="linux logo">
+            </picture>
+            Windows
+        </h2>
+        <ol>
+            <li>Go to the <a href="https://github.com/mpvqc/mpvQC/releases"> release page</a>.</li>
+            <li>Download the <b>7z</b> file and extract it.</li>
+            <li>Double-click on <b>mpvQC.exe</b> to run it.</li>
+        </ol>
+    </div>
+    <div class="column">
+        <h2>
+            <picture>
+                <!-- https://www.svgrepo.com/svg/232488/linux-->
+                <source height="40"
+                        width="40"
+                        srcset="/images/linux-logo-dark.svg"
+                        media="(prefers-color-scheme: dark)">
+                <img height="40"
+                     width="40"
+                     src="/images/linux-logo-light.svg"
+                     style="vertical-align: middle;"
+                     alt="linux logo">
+            </picture>
+            Linux
+        </h2>
+        <ol>
+            <li>Download the <a href="https://mpvqc.github.io/mpvQC-flatpak/mpvQC.flatpakref"
+                                download="mpvQC.flatpakref">Flatpak Ref File</a>.
+            </li>
+            <li>Double-click on the downloaded file to install it.</li>
+        </ol>
+    </div>
+</div>

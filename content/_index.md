@@ -13,7 +13,9 @@ title = "mpvQC"
 
 mpvQC is a libmpv-based application for quick and easy creation of video file quality control reports.
 
-Current Version: [v0.9.0-beta](https://github.com/mpvqc/mpvQC/releases/tag/0.9.0-beta)
+{{<install-instructions>}}
 
-For release notes and downloads, 
+For release notes and downloads,
 [see the latest release announcements](https://github.com/mpvqc/mpvQC/releases).
+
+Current Version: [v0.9.0-beta](https://github.com/mpvqc/mpvQC/releases/tag/0.9.0-beta)
