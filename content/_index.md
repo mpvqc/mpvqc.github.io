@@ -11,7 +11,7 @@ title = "mpvQC"
     alt="Screenshot of application"
 >}}
 
-mpvQC is a libmpv-based application for quick and easy creation of video file quality control reports.
+A libmpv-based application for quick and easy creation of video file quality control reports.
 
 {{<install-instructions>}}
 
