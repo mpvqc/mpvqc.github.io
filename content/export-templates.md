@@ -12,7 +12,7 @@ engine. To begin, follow these steps:
 1. Create a new file in the `export-template` directory with the **.jinja** extension (e.g., `MyTemplate.jinja`). The
    location of the `export-template` directory varies depending on your operating system:
     * On Windows: `appdata/export-templates`
-    * On Linux: `~/.var/app/com.github.mpvqc.mpvQC/config/mpvQC/export-templates`
+    * On Linux: `~/.var/app/io.github.mpvqc.mpvQC/config/mpvQC/export-templates`
 1. Edit the template
 1. Restart mpvQC
 
