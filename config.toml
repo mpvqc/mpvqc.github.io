@@ -8,7 +8,7 @@ theme = 'hugo-bearblog'
 # Basic metadata configuration for your blog.
 title = "mpvQC"
 author = "mpvQC developers"
-copyright = "&copy; mpvQC developers - powered by hugo and hugo-bearblog theme"
+copyright = "&copy; mpvQC developers"
 languageCode = "en-US"
 
 # Generate a nice robots.txt for SEO
@@ -55,6 +55,7 @@ hideMadeWithLine = false
 name = "Source"
 url = "https://github.com/mpvqc/mpvQC"
 weight = 1
+
 [[menu.main]]
 name = "Issue Tracker"
 url = "https://github.com/mpvqc/mpvQC/issues"

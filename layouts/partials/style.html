@@ -1,0 +1,161 @@
+<!--Based on https://github.com/rokcso/hugo-bearblog-neo/blob/ea1d133bb9b663976954b1b99e8b96be12484a77/layouts/partials/style.html#L1 -->
+
+<style>
+    /* light theme */
+    :root {
+        --width-max: 720px;
+        --font-primary: Verdana, sans-serif;
+        --font-secondary: monospace;
+        --font-size-primary: 1em;
+        --font-size-secondary: 0.8em;
+        --body-bg-color: #fcfcfc;
+        --bold-text-color: #222;
+        --body-text-color: #444;
+        --link-color: #3273dc;
+        --link-visited-color: #8b6fcb;
+        --table-border-color: #f2f2f2;
+        --table-th-bg-color: #f2f2f2;
+        --img-border-color: #f2f2f2;
+        --code-bg-color: #f2f2f2;
+        --code-text-color: #222;
+        --blockquote-border-color: #666;
+        --blockquote-text-color: #666;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        /* dark theme */
+        :root {
+            --body-bg-color: #1c1c1c;
+            --bold-text-color: #eee;
+            --body-text-color: #ddd;
+            --link-color: #8cc2dd;
+            --link-visited-color: #c3b1ee;
+            --table-border-color: #999;
+            --table-th-bg-color: #999;
+            --img-border-color: #999;
+            --code-bg-color: #555;
+            --code-text-color: #ddd;
+            --blockquote-border-color: #ccc;
+            --blockquote-text-color: #ccc;
+        }
+    }
+
+    body {
+        font-family: var(--font-primary);
+        font-size: var(--font-size-primary);
+        margin: auto;
+        padding: 20px;
+        max-width: var(--width-max);
+        text-align: left;
+        background-color: var(--body-bg-color);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.5;
+        color: var(--body-text-color);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+        color: var(--bold-text-color);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 16px 0;
+    }
+
+    a {
+        color: var(--link-color);
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .title span {
+        font-weight: 400;
+    }
+
+    nav a {
+        margin-right: 8px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 2px;
+    }
+
+    th {
+    }
+
+    hr {
+        border: 0;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 6px;
+        content-visibility: auto;
+        loading: lazy;
+    }
+
+    i {
+        font-style: normal;
+    }
+
+    time {
+        font-family: var(--font-secondary);
+        font-size: 15px;
+    }
+
+    code {
+        font-family: var(--font-secondary);
+        background-color: var(--code-bg-color);
+        color: var(--code-text-color);
+        padding: 2px;
+        border-radius: 4px;
+    }
+
+    pre code {
+        display: block;
+        padding: 16px;
+        white-space: pre-wrap;
+        overflow-x: auto;
+    }
+
+    div.highlight pre {
+        border-radius: 4px;
+    }
+
+    blockquote p {
+        margin: 0;
+    }
+
+    footer {
+        padding: 25px 0;
+        text-align: center;
+        font-size: var(--font-size-secondary);
+    }
+
+    ul li:has(input) {
+        list-style-type: none;
+        margin-left: -25.5px;
+    }
+</style>
