@@ -1,0 +1,17 @@
+<!--
+    Based on Hugo figure shortcode: https://github.com/gohugoio/hugo/blobe402d91ee199afcace8ae75da6c3587bb8089ace/tpl/tplimpl/embedded/templates/shortcodes/figurehtml
+    And this blog post: https://stenbrinke.nl/blog/adding-support-for-dark-and-light-images-to-hugo-figure-shortcode/#final-result
+-->
+<p>
+    <picture>
+        <source srcset="{{ .Get "dark-src" }}"
+            {{- with .Get "alt" }} alt="{{ . }}" {{ end -}}
+            {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+            {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+            media="(prefers-color-scheme: dark)">
+        <img src="{{ .Get "light-src" }}"
+            {{- with .Get "alt" }} alt="{{ . }}" {{ end -}}
+            {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+            {{- with .Get "height" }} height="{{ . }}"{{ end -}}>
+    </picture>
+</p>
