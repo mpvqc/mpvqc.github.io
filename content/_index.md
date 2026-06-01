@@ -6,8 +6,8 @@ title = "mpvQC"
 +++
 
 {{<figure-dynamic
-    dark-src="/images/mpvQC-dark.png" 
-    light-src="/images/mpvQC-light.png"  
+    dark-src="/images/mpvQC-dark.webp" 
+    light-src="/images/mpvQC-light.webp"  
     alt="Screenshot of application"
 >}}
 
