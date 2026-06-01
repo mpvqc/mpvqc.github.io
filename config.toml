@@ -9,7 +9,7 @@ theme = 'hugo-bearblog'
 title = "mpvQC"
 author = "mpvQC developers"
 copyright = "&copy; mpvQC developers"
-languageCode = "en-US"
+locale = "en-US"
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true
