@@ -7,7 +7,12 @@ draft: false
 # Export Templates
 
 mpvQC uses the [Jinja template](https://jinja.palletsprojects.com/en/3.1.x/) engine to customize how QC reports are
-exported. This allows you to control the format and structure of your exported documents.
+exported: templates control the format and structure of the documents written by the export menu.
+
+Templates are made for human-readable output. If you want to feed QC data into scripts or other tooling, you don't
+need a template: mpvQC saves QC documents in a
+[versioned JSON format](https://github.com/mpvqc/mpvQC/tree/main/docs/document-format) with a JSON Schema per
+version, designed exactly for that.
 
 ## Getting Started
 
@@ -16,7 +21,7 @@ exported. This allows you to control the format and structure of your exported d
 3. Edit the template file using any text editor
 4. Restart mpvQC to load the new template
 
-Once loaded, your custom template will appear as a new export option in the File menu.
+Once loaded, your custom template appears as a new entry under **File → Export QC Document**.
 
 ## Template Reference
 
@@ -28,7 +33,7 @@ In addition to standard Jinja expressions, mpvQC provides the following properti
 |--------------------------|--------------|---------------------------------------------------------------------|
 | **Report Metadata**      |              |                                                                     |
 | `write_date`             | `bool`       | Whether to include the export date/time                             |
-| `date`                   | `str`        | Current date/time formatted according to user's locale (LongFormat) |
+| `date`                   | `str`        | Current date/time as `yyyy-MM-dd HH:mm`                             |
 | `write_generator`        | `bool`       | Whether to include the generator information                        |
 | `generator`              | `str`        | mpvQC version string (e.g., "mpvQC 0.9.0")                          |
 | &nbsp;                   |              |                                                                     |
@@ -48,6 +53,7 @@ In addition to standard Jinja expressions, mpvQC provides the following properti
 | **Comments**             |              |                                                                     |
 | `comments`               | `list[dict]` | List of comment dictionaries containing:                            |
 |                          |              | • `time` (int): Time in seconds                                     |
+|                          |              | • `time_ms` (int): Time in milliseconds                             |
 |                          |              | • `commentType` (str): Type of comment                              |
 |                          |              | • `comment` (str): The comment text                                 |
 
@@ -56,11 +62,12 @@ In addition to standard Jinja expressions, mpvQC provides the following properti
 | Filter            | Purpose                                    | Usage                                                                   |
 |-------------------|--------------------------------------------|-------------------------------------------------------------------------|
 | `as_time`         | Converts seconds to `HH:mm:ss` format      | `{{ comment['time'] \| as_time }}` → `00:00:00`                         |
+| `as_time_ms`      | Converts milliseconds to `HH:mm:ss.zzz`    | `{{ comment['time_ms'] \| as_time_ms }}` → `00:15:29.340`               |
 | `as_comment_type` | Translates comment type to user's language | `{{ comment['commentType'] \| as_comment_type }}` → Localized type name |
 
-## Default Template
+## Example: The Classic Template
 
-mpvQC uses this template internally for saving QC documents:
+mpvQC uses this template internally for the built-in **mpvQC Classic** export:
 
 ```
 [FILE]
