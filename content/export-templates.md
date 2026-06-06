@@ -11,11 +11,10 @@ exported. This allows you to control the format and structure of your exported d
 
 ## Getting Started
 
-1. Create a new file with the **.jinja** extension (e.g., `MyTemplate.jinja`) in the appropriate directory:
-    * **Windows**: `appdata/export-templates`
-    * **Linux**: `~/.var/app/io.github.mpvqc.mpvQC/config/mpvQC/export-templates`
-2. Edit the template file using any text editor
-3. Restart mpvQC to load the new template
+1. In mpvQC, open the app data folder via **Help → Open App Data Folder...**
+2. Create a new file with the **.jinja** extension (e.g., `MyTemplate.jinja`) in the `export-templates` directory
+3. Edit the template file using any text editor
+4. Restart mpvQC to load the new template
 
 Once loaded, your custom template will appear as a new export option in the File menu.
 
