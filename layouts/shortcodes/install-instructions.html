@@ -1,60 +1,81 @@
 <style>
-    .container {
+    .install-container {
+        --card-border-color: #ddd;
         display: flex;
         flex-wrap: wrap;
+        gap: 1rem;
     }
 
-    .column {
-        flex: 1;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    @media (max-width: 768px) {
-        .column {
-            flex-basis: 100%; /* Stacks columns on smaller screens */
+    @media (prefers-color-scheme: dark) {
+        .install-container {
+            --card-border-color: #999;
         }
     }
+
+    .install-card {
+        flex: 1 1 260px;
+        box-sizing: border-box;
+        border: 1px solid var(--card-border-color);
+        border-radius: 8px;
+        padding: 0.25rem 1.25rem 1rem;
+    }
+
+    .install-card h3 {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .install-card h3 img {
+        display: block;
+    }
+
+    .install-card ol {
+        margin: 0;
+        padding-left: 1.25rem;
+    }
+
+    .install-card li + li {
+        margin-top: 0.3rem;
+    }
 </style>
-<div class="container">
-    <div class="column">
-        <h2>
+<div class="install-container">
+    <div class="install-card">
+        <h3>
             <picture>
                 <!-- https://www.svgrepo.com/svg/232490/windows-operating-system -->
-                <source height="40"
-                        width="40"
+                <source height="24"
+                        width="24"
                         srcset="/images/windows-logo-dark.svg"
                         media="(prefers-color-scheme: dark)">
-                <img height="40"
-                     width="40"
+                <img height="24"
+                     width="24"
                      src="/images/windows-logo-light.svg"
-                     style="vertical-align: middle;"
-                     alt="linux logo">
+                     alt="windows logo">
             </picture>
             Windows
-        </h2>
+        </h3>
         <ol>
-            <li>Go to the <a href="https://github.com/mpvqc/mpvQC/releases"> release page</a>.</li>
+            <li>Go to the <a href="https://github.com/mpvqc/mpvQC/releases">release page</a>.</li>
             <li>Download the <b>win-x86_64.zip</b> file and extract it.</li>
             <li>Double-click on <b>mpvQC.exe</b> to run it.</li>
         </ol>
     </div>
-    <div class="column">
-        <h2>
+    <div class="install-card">
+        <h3>
             <picture>
                 <!-- https://www.svgrepo.com/svg/232488/linux-->
-                <source height="40"
-                        width="40"
+                <source height="24"
+                        width="24"
                         srcset="/images/linux-logo-dark.svg"
                         media="(prefers-color-scheme: dark)">
-                <img height="40"
-                     width="40"
+                <img height="24"
+                     width="24"
                      src="/images/linux-logo-light.svg"
-                     style="vertical-align: middle;"
                      alt="linux logo">
             </picture>
             Linux
-        </h2>
+        </h3>
         <ol>
             <li>Download the <a href="https://mpvqc.github.io/mpvQC-flatpak/mpvQC.flatpakref"
                                 download="mpvQC.flatpakref">Flatpak Ref File</a>.
