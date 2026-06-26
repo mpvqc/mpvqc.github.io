@@ -1,23 +1,12 @@
 <style>
     .install-container {
-        --card-border-color: #ddd;
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
     }
 
-    @media (prefers-color-scheme: dark) {
-        .install-container {
-            --card-border-color: #999;
-        }
-    }
-
     .install-card {
         flex: 1 1 260px;
-        box-sizing: border-box;
-        border: 1px solid var(--card-border-color);
-        border-radius: 8px;
-        padding: 0.25rem 1.25rem 1rem;
     }
 
     .install-card h3 {
@@ -40,7 +29,7 @@
     }
 </style>
 <div class="install-container">
-    <div class="install-card">
+    <div class="install-card card">
         <h3>
             <picture>
                 <!-- https://www.svgrepo.com/svg/232490/windows-operating-system -->
@@ -61,7 +50,7 @@
             <li>Double-click on <b>mpvQC.exe</b> to run it.</li>
         </ol>
     </div>
-    <div class="install-card">
+    <div class="install-card card">
         <h3>
             <picture>
                 <!-- https://www.svgrepo.com/svg/232488/linux-->

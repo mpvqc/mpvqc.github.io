@@ -20,6 +20,7 @@
         --code-text-color: #222;
         --blockquote-border-color: #666;
         --blockquote-text-color: #666;
+        --card-border-color: #ddd;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -37,6 +38,7 @@
             --code-text-color: #ddd;
             --blockquote-border-color: #ccc;
             --blockquote-text-color: #ccc;
+            --card-border-color: #999;
         }
     }
 
@@ -157,5 +159,22 @@
     ul li:has(input) {
         list-style-type: none;
         margin-left: -25.5px;
+    }
+
+    .card {
+        box-sizing: border-box;
+        border: 1px solid var(--card-border-color);
+        border-radius: 12px;
+        padding: 0.25rem 1.25rem 1rem;
+    }
+
+    .content-card + .content-card {
+        margin-top: 1rem;
+    }
+
+    .card th,
+    .card td {
+        padding: 6px 16px 6px 0;
+        text-align: left;
     }
 </style>
