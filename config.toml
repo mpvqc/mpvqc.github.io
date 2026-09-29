@@ -75,3 +75,12 @@ noClasses = false
 
 [markup.goldmark.parser.attribute]
 block = true
+
+# Keep the legacy URL available without maintaining a second version payload.
+[[module.mounts]]
+source = "static"
+target = "static"
+
+[[module.mounts]]
+source = "static/api/v1/public/version.json"
+target = "static/api/v1/public/version"
