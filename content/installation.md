@@ -44,7 +44,6 @@ Update mpvQC through your software manager.
 **Terminal alternative**
 
 These commands install mpvQC for your account.
-If you installed mpvQC through your software manager, update it there instead.
 
 Install:
 
@@ -56,10 +55,4 @@ Launch:
 
 ```sh
 flatpak run --user io.github.mpvqc.mpvQC
-```
-
-Update:
-
-```sh
-flatpak update --user io.github.mpvqc.mpvQC
 ```
