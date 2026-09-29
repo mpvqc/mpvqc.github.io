@@ -9,7 +9,6 @@ draft: false
 
 mpvQC is a portable application for x86-64 PCs. The ZIP includes its runtime dependencies.
 
-{{< card >}}
 ### Install {#windows-install}
 
 Download the application ZIP from the [latest release](https://github.com/mpvqc/mpvQC/releases/latest).
@@ -18,9 +17,7 @@ Don't download `release-build-windows.zip`, the intermediate build archive.
 
 Extract the whole ZIP into a writable folder, then run `mpvQC.exe`.
 Keep the extracted files together, including `portable`.
-{{< /card >}}
 
-{{< card >}}
 ### Update {#windows-update}
 
 1. Close mpvQC.
@@ -33,7 +30,6 @@ Keep the extracted files together, including `portable`.
 mpvQC recreates these files with current defaults, resetting preferences, custom playback configuration
 and key bindings. Backups, screenshots, export templates and other copied app data stay available.
 Keep the old installation and its app data intact.
-{{< /card >}}
 
 ## Linux
 
@@ -41,7 +37,6 @@ mpvQC uses [the project's own Flatpak repository](https://github.com/mpvqc/mpvQC
 
 Follow the [Flatpak setup instructions](https://flatpak.org/setup/) for your distribution.
 
-{{< card >}}
 ### Install {#linux-install}
 
 Open [mpvQC.flatpakref](https://mpvqc.github.io/mpvQC-flatpak/mpvQC.flatpakref) with your software manager,
@@ -59,9 +54,7 @@ flatpak list --app --columns=application,installation
 
 Find `io.github.mpvqc.mpvQC`. If the installation column says `system`, replace `--user` with `--system`
 below.
-{{< /card >}}
 
-{{< card >}}
 ### Launch {#linux-launch}
 
 Open **mpvQC** from your application menu, or run:
@@ -69,9 +62,7 @@ Open **mpvQC** from your application menu, or run:
 ```sh
 flatpak run --user io.github.mpvqc.mpvQC
 ```
-{{< /card >}}
 
-{{< card >}}
 ### Update {#linux-update}
 
 Close mpvQC. Update through your software manager, or run:
@@ -81,4 +72,3 @@ flatpak update --user io.github.mpvqc.mpvQC
 ```
 
 Then launch mpvQC again.
-{{< /card >}}
