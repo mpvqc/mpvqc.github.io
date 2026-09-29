@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <article>
+    <header class="page-header">
+      <p class="eyebrow">mpvQC / guide</p>
+      <h1 id="{{ .Title | anchorize }}">{{ .Title }}</h1>
+      {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    </header>
+    {{ if .Fragments.Headings }}
+      <aside class="page-toc" aria-label="On this page">
+        <p>On this page</p>
+        {{ .TableOfContents }}
+      </aside>
+    {{ end }}
+    <div class="page-content">{{ .Content }}</div>
+  </article>
+{{ end }}

@@ -1,13 +1,12 @@
 ---
-title: "Installation"
+title: "Installation and updating"
+description: "Get mpvQC running on Windows or Linux, then keep it up to date."
 draft: false
 ---
 
-# Installation and Updating
-
 ## Windows
 
-**Install**
+### Install on Windows
 
 1. Download the ZIP ending in `-win-x86_64.zip` from the
    [latest release](https://github.com/mpvqc/mpvQC/releases/latest).
@@ -15,7 +14,7 @@ draft: false
 
 You don't need to install anything else.
 
-**Update**
+### Update on Windows
 
 1. Close mpvQC.
 2. Download the new ZIP and extract it into a **separate folder**, not into your old mpvQC folder.
@@ -29,7 +28,7 @@ and export templates stay available. Leave the old folder unchanged.
 
 ## Linux
 
-**Install**
+### Install on Linux
 
 Set up [Flatpak](https://flatpak.org/setup/) if you haven't already. Download
 [mpvQC.flatpakref](https://mpvqc.github.io/mpvQC-flatpak/mpvQC.flatpakref) and open it with your software
@@ -37,11 +36,11 @@ manager to install mpvQC.
 
 Open **mpvQC** from your application menu.
 
-**Update**
+### Update on Linux
 
 Update mpvQC through your software manager.
 
-**Terminal alternative**
+### Use the terminal
 
 These commands install mpvQC for your account.
 

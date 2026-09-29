@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+  {{ partial "favicon.html" . }}
+  {{ partial "seo_tags.html" . }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ with resources.Get "css/site.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+  {{ end }}
+</head>
+<body class="{{ if .IsHome }}home{{ else }}document{{ end }}">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    {{ partial "header.html" . }}
+  </header>
+  <main id="main-content">{{ block "main" . }}{{ end }}</main>
+  <footer class="site-footer">
+    {{ partial "footer.html" . }}
+  </footer>
+</body>
+</html>
