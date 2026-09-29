@@ -40,9 +40,10 @@ Open **mpvQC** from your application menu.
 
 Update mpvQC through your software manager.
 
-### Use the terminal
+### Terminal alternative
 
-These commands install mpvQC for your account.
+If you prefer the terminal, use these commands instead of the software manager.
+They install mpvQC for your account.
 
 Install:
 
