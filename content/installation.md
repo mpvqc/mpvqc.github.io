@@ -39,7 +39,7 @@ Open **mpvQC** from your application menu.
 
 **Update**
 
-Close mpvQC and update it through your software manager.
+Update mpvQC through your software manager.
 
 **Terminal alternative**
 
@@ -58,7 +58,7 @@ Launch:
 flatpak run --user io.github.mpvqc.mpvQC
 ```
 
-Close mpvQC before updating:
+Update:
 
 ```sh
 flatpak update --user io.github.mpvqc.mpvQC
