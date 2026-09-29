@@ -25,10 +25,7 @@ reports for video files.
 
 ## Installation
 
-{{<install-instructions>}}
-
-For release notes and downloads,
-[see the latest release announcements](https://github.com/mpvqc/mpvQC/releases).
+See the [installation and update guide](/installation/) for Windows and Linux.
 
 mpvQC is free software, licensed under the
 [GPL-3.0-or-later](https://github.com/mpvqc/mpvQC/blob/main/LICENSE).
