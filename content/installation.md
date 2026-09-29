@@ -7,68 +7,61 @@ draft: false
 
 ## Windows
 
-mpvQC is a portable application for x86-64 PCs. The ZIP includes its runtime dependencies.
-
 ### Install {#windows-install}
 
-Download the application ZIP from the [latest release](https://github.com/mpvqc/mpvQC/releases/latest).
-Its name starts with `mpvQC-` and ends with `-win-x86_64.zip`.
-Don't download `release-build-windows.zip`, the intermediate build archive.
+1. Download the ZIP ending in `-win-x86_64.zip` from the
+   [latest release](https://github.com/mpvqc/mpvQC/releases/latest).
+2. Extract it, then open `mpvQC.exe`.
 
-Extract the whole ZIP into a writable folder, then run `mpvQC.exe`.
-Keep the extracted files together, including `portable`.
+You don't need to install anything else.
 
 ### Update {#windows-update}
 
 1. Close mpvQC.
-2. Download the new ZIP and extract it into a **separate folder**, not over the old installation.
-3. Copy the old `appdata` folder beside the new `mpvQC.exe`.
+2. Download the new ZIP and extract it into a **separate folder**, not into your old mpvQC folder.
+3. Copy `appdata` from your old mpvQC folder into the new one.
 4. In the **new copy of `appdata` only**, delete `settings.ini`, `mpv.conf` and `input.conf` if they're there.
    Leave everything else alone.
-5. Run the new `mpvQC.exe`.
+5. Open the new `mpvQC.exe`.
 
-mpvQC recreates these files with current defaults, resetting preferences, custom playback configuration
-and key bindings. Backups, screenshots, export templates and other copied app data stay available.
-Keep the old installation and its app data intact.
+This resets your preferences, playback settings and keyboard shortcuts. Your backups, screenshots
+and export templates stay available. Leave the old folder unchanged.
 
 ## Linux
 
-mpvQC uses [the project's own Flatpak repository](https://github.com/mpvqc/mpvQC-flatpak).
-
-Follow the [Flatpak setup instructions](https://flatpak.org/setup/) for your distribution.
-
 ### Install {#linux-install}
 
-Open [mpvQC.flatpakref](https://mpvqc.github.io/mpvQC-flatpak/mpvQC.flatpakref) with your software manager,
-or run:
+Set up [Flatpak](https://flatpak.org/setup/) if you haven't already. Download
+[mpvQC.flatpakref](https://mpvqc.github.io/mpvQC-flatpak/mpvQC.flatpakref) and open it with your software
+manager to install mpvQC.
+
+### Launch {#linux-launch}
+
+Open **mpvQC** from your application menu.
+
+### Update {#linux-update}
+
+Close mpvQC and update it through your software manager.
+
+### Terminal alternative
+
+These commands install mpvQC for your account.
+If you installed mpvQC through your software manager, update it there instead.
+
+Install:
 
 ```sh
 flatpak install --user https://mpvqc.github.io/mpvQC-flatpak/mpvQC.flatpakref
 ```
 
-The command installs for your user account. Your software manager may install system-wide. Check:
-
-```sh
-flatpak list --app --columns=application,installation
-```
-
-Find `io.github.mpvqc.mpvQC`. If the installation column says `system`, replace `--user` with `--system`
-below.
-
-### Launch {#linux-launch}
-
-Open **mpvQC** from your application menu, or run:
+Launch:
 
 ```sh
 flatpak run --user io.github.mpvqc.mpvQC
 ```
 
-### Update {#linux-update}
-
-Close mpvQC. Update through your software manager, or run:
+Close mpvQC before updating:
 
 ```sh
 flatpak update --user io.github.mpvqc.mpvQC
 ```
-
-Then launch mpvQC again.
