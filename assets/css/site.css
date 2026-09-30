@@ -85,17 +85,14 @@ li + li { margin-top: 8px; }
 .site-nav { display: flex; flex-wrap: wrap; gap: 16px; font-size: .9rem; }
 .site-nav a { text-decoration: none; }
 .site-nav a:hover, .site-nav a[aria-current] { text-decoration: underline; }
-.eyebrow, .intro > p:first-child { margin-bottom: 12px; color: var(--muted); font-size: .78rem; }
-.intro { padding-top: 48px; }
+.intro, .page-header { padding-top: 48px; }
 .lead, .intro > h1 + p { max-width: 620px; font-size: 1.15rem; line-height: 1.65; }
-.intro > p:last-child { margin: 22px 0; color: var(--muted); font-size: .9rem; }
 
 .platform-links { display: grid; grid-template-columns: 1fr 1fr; border-block: 1px solid var(--rule); }
 .platform-links a { padding: 18px 0; text-decoration: none; font-weight: 600; }
 .platform-links a + a { border-left: 1px solid var(--rule); padding-left: 24px; }
 .platform-links a:hover { text-decoration: underline; }
 .platform-links span { display: block; margin-top: 4px; color: var(--muted); font-size: .8rem; font-weight: 400; }
-.platform-links + p { margin-top: 12px; font-size: .8rem; }
 
 .workflow { margin: 64px 0 36px; }
 .home h2 { margin-bottom: 20px; font-size: 1.05rem; }
@@ -107,9 +104,10 @@ li + li { margin-top: 8px; }
   gap: 8px 14px;
   margin: 0;
   padding: 16px 0;
-  border-bottom: 1px solid var(--rule);
   counter-increment: step;
 }
+
+.workflow li:not(:last-child) { border-bottom: 1px solid var(--rule); }
 
 .workflow li::before {
   content: counter(step, decimal-leading-zero);
@@ -123,8 +121,6 @@ li + li { margin-top: 8px; }
 .screenshot { margin: 8px 0 24px; }
 .screenshot img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 6px; }
 .screenshot figcaption { margin-top: 8px; color: var(--muted); font-size: .75rem; }
-.document main { max-width: 680px; margin: auto; }
-.page-header { padding-top: 40px; }
 .page-header h1 { font-size: clamp(2rem, 5vw, 2.3rem); }
 .page-header .lead { font-size: 1.05rem; }
 .page-toc { margin: 30px 0; padding: 16px 0; border-block: 1px solid var(--rule); }
