@@ -1,10 +1,9 @@
 ---
-title: "Export Templates"
+title: "Export templates"
+description: "Choose the format and structure of your quality control reports with Jinja templates."
 date: 2024-03-24T11:30:00+01:00
 draft: false
 ---
-
-# Export Templates
 
 mpvQC uses the [Jinja template](https://jinja.palletsprojects.com/en/3.1.x/) engine to customize how QC reports are
 exported: templates control the format and structure of the documents written by the export menu.
@@ -14,7 +13,7 @@ need a template: mpvQC saves QC documents in a
 [versioned JSON format](https://github.com/mpvqc/mpvQC/tree/main/docs/document-format) with a JSON Schema per
 version, designed exactly for that.
 
-## Getting Started
+## Create a template {#getting-started}
 
 1. In mpvQC, open the app data folder via **Help → Open App Data Folder...**
 2. Create a new file with the **.jinja** extension (e.g., `MyTemplate.jinja`) in the `export-templates` directory
@@ -23,12 +22,11 @@ version, designed exactly for that.
 
 Once loaded, your custom template appears as a new entry under **File → Export QC Document**.
 
-## Template Reference
+## Template reference
 
 In addition to standard Jinja expressions, mpvQC provides the following properties and filters:
 
-{{< card >}}
-### Report Metadata
+### Report metadata
 
 | Property          | Type   | Description                                  |
 |-------------------|--------|----------------------------------------------|
@@ -36,9 +34,6 @@ In addition to standard Jinja expressions, mpvQC provides the following properti
 | `date`            | `str`  | Current date/time as `yyyy-MM-dd HH:mm`      |
 | `write_generator` | `bool` | Whether to include the generator information |
 | `generator`       | `str`  | mpvQC version string (e.g., "mpvQC 0.9.0")   |
-{{< /card >}}
-
-{{< card >}}
 ### Video
 
 | Property           | Type   | Description                                                |
@@ -46,27 +41,18 @@ In addition to standard Jinja expressions, mpvQC provides the following properti
 | `write_video_path` | `bool` | Whether to include the video file path                     |
 | `video_path`       | `str`  | Absolute path to the video file (empty if no video loaded) |
 | `video_name`       | `str`  | Video filename with extension (empty if no video loaded)   |
-{{< /card >}}
-
-{{< card >}}
 ### User
 
 | Property         | Type   | Description                            |
 |------------------|--------|----------------------------------------|
 | `write_nickname` | `bool` | Whether to include the user's nickname |
 | `nickname`       | `str`  | User's nickname for report attribution |
-{{< /card >}}
-
-{{< card >}}
 ### Subtitles
 
 | Property               | Type        | Description                                          |
 |------------------------|-------------|------------------------------------------------------|
 | `write_subtitle_paths` | `bool`      | Whether to include manually imported subtitle paths  |
 | `subtitles`            | `list[str]` | List of subtitle file paths                           |
-{{< /card >}}
-
-{{< card >}}
 ### Comments
 
 `comments` is a list of dictionaries, one per comment:
@@ -77,9 +63,6 @@ In addition to standard Jinja expressions, mpvQC provides the following properti
 | `time_ms`     | `int` | Time in milliseconds |
 | `commentType` | `str` | Type of comment      |
 | `comment`     | `str` | The comment text     |
-{{< /card >}}
-
-{{< card >}}
 ### Filters
 
 | Filter            | Purpose                                    | Usage                                                                   |
@@ -87,13 +70,11 @@ In addition to standard Jinja expressions, mpvQC provides the following properti
 | `as_time`         | Converts seconds to `HH:mm:ss` format      | `{{ comment['time'] \| as_time }}` → `00:00:00`                         |
 | `as_time_ms`      | Converts milliseconds to `HH:mm:ss.zzz`    | `{{ comment['time_ms'] \| as_time_ms }}` → `00:15:29.340`               |
 | `as_comment_type` | Translates comment type to user's language | `{{ comment['commentType'] \| as_comment_type }}` → Localized type name |
-{{< /card >}}
-
-## Example: The Classic Template
+## Example: the Classic template
 
 mpvQC uses this template internally for the built-in **mpvQC Classic** export:
 
-```
+```jinja
 [FILE]
 {{ 'date      : ' + date + '\n'       if write_date       else '' -}}
 {{ 'generator : ' + generator + '\n'  if write_generator  else '' -}}

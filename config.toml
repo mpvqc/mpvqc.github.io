@@ -15,14 +15,14 @@ locale = "en-US"
 enableRobotsTXT = true
 
 # Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
-disableKinds = ["RSS"]
+disableKinds = ["RSS", "taxonomy", "term"]
 #[permalinks]
 #  blog = "/:slug/"
 #  tags = "/blog/:slug"
 
 [params]
 # The "description" of your website. This is used in the metadata of your generated html.
-description = "libmpv based application for quality control of videos"
+description = "Watch a video, take quality control notes, and share a report. Free and open source for Windows and Linux."
 
 # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
 # Hint: It's good practise to also put a "favicon.ico"-file into your "static"-folder.
@@ -52,11 +52,35 @@ hideMadeWithLine = false
 
 
 [[menu.main]]
-name = "Source"
-url = "https://github.com/mpvqc/mpvQC"
+name = "Install"
+pageRef = "/installation"
 weight = 1
 
 [[menu.main]]
-name = "Issue Tracker"
-url = "https://github.com/mpvqc/mpvQC/issues"
+name = "Export templates"
+pageRef = "/export-templates"
 weight = 2
+
+[[menu.main]]
+name = "Source"
+url = "https://github.com/mpvqc/mpvQC"
+weight = 3
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 2
+
+[markup.highlight]
+noClasses = false
+
+[markup.goldmark.parser.attribute]
+block = true
+
+# Keep the legacy URL available without maintaining a second version payload.
+[[module.mounts]]
+source = "static"
+target = "static"
+
+[[module.mounts]]
+source = "static/api/v1/public/version.json"
+target = "static/api/v1/public/version"

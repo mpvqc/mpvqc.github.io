@@ -1,31 +1,38 @@
 +++
-# This title is used as the og:title on Hugo's internal
-# opengraph structured data template on the home page.
-# See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
 title = "mpvQC"
+description = "Watch a video, take quality control notes, and share a report. Free and open source for Windows and Linux."
 +++
 
-{{<figure-dynamic
-    dark-src="/images/mpvQC-dark.webp" 
-    light-src="/images/mpvQC-light.webp"  
-    alt="Screenshot of application"
+{{< intro >}}
+# Quality control notes, right beside your video.
+
+Watch a video, mark what needs fixing, and share a report. mpvQC brings playback and note-taking into one application.
+
+{{< /intro >}}
+
+{{< figure-dynamic
+    dark-src="/images/mpvQC-dark.webp"
+    light-src="/images/mpvQC-light.webp"
+    alt="mpvQC with video playback and a table of quality control comments"
+    width="1200"
+    height="1037"
 >}}
 
-mpvQC is a free and open-source application for creating quality control
-reports for video files.
+{{< install-links >}}
 
-## Features
+{{< workflow >}}
+## From playback to report
 
-- **Built-in video player.** Powered by [mpv](https://mpv.io)
-- **Quick note-taking.** Press a key, pick a comment type, write your comment
-- **Comment table.** Edit, search, undo, jump back to any comment's video position
-- **Shareable reports.** Re-import them later, together with video and subtitles
-- **[Custom export templates](/export-templates/).** Shape reports the way you need them
-- **Cross-platform.** Windows and Linux, available in several languages
+1. **Watch**
 
-## Installation
+   Play your video with the built-in [mpv](https://mpv.io) player.
 
-See the [installation and update guide](/installation/) for Windows and Linux.
+2. **Mark**
 
-mpvQC is free software, licensed under the
-[GPL-3.0-or-later](https://github.com/mpvqc/mpvQC/blob/main/LICENSE).
+   Press a key, choose a comment type, and write a note. Edit, search, or undo comments, and jump back to their video positions.
+
+3. **Share**
+
+   Export a report, or re-import it later with your video and subtitles. [Custom templates](/export-templates/) control the report format.
+{role="list"}
+{{< /workflow >}}
