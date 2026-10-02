@@ -1,11 +1,11 @@
 # Website
 
-Built with Hugo and Bearblog. Content lives in `content/`, layouts in `layouts/`, and styles in
+Built with Hugo. Content lives in `content/`, layouts in `layouts/`, and styles in
 `assets/css/site.css`. No downloaded fonts or client-side JavaScript.
 
 ## Local preview
 
-Clone with `git clone --recurse-submodules <url>`, then run `just serve`.
+Clone the repository, then run `just serve`.
 Open <http://localhost:1313>.
 
 Build the published site with `hugo --minify`.
@@ -26,4 +26,3 @@ Both prototypes are archived on the `prototype/site-designs` branch.
 ## Links
 
 - [Hugo](https://gohugo.io/)
-- [Bearblog](https://github.com/janraasch/hugo-bearblog/)
