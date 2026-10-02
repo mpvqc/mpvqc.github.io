@@ -30,7 +30,7 @@ and export templates stay available. Leave the old folder unchanged.
 
 ### Install on Linux
 
-Set up [Flatpak](https://flatpak.org/setup/) if you haven't already. Download
+Set up [Flatpak](https://flatpak.org/) if you haven't already. Download
 [mpvQC.flatpakref](https://mpvqc.github.io/mpvQC-flatpak/mpvQC.flatpakref) and open it with your software
 manager to install mpvQC.
 
