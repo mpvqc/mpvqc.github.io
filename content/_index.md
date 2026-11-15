@@ -4,6 +4,7 @@ description = "Watch a video, take quality control notes, and share a report. Fr
 +++
 
 {{< intro >}}
+
 # Quality control notes, right beside your video.
 
 Watch a video, mark what needs fixing, and share a report. mpvQC brings playback and note-taking into one application.
@@ -21,6 +22,7 @@ Watch a video, mark what needs fixing, and share a report. mpvQC brings playback
 {{< install-links >}}
 
 {{< workflow >}}
+
 ## From playback to report
 
 1. **Watch**
