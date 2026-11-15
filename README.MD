@@ -15,7 +15,7 @@ Build the published site with `hugo --minify`.
 You need [just](https://github.com/casey/just), [uv](https://docs.astral.sh/uv/) and [Hugo](https://gohugo.io/).
 
 - `just init`: install the git hooks
-- `just format`: format the repo
+- `just format`: format the repo and lint the workflows
 - `just update-git-hook-dependencies`: update the git hooks
 
 ## Version check
