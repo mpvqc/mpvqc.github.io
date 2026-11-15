@@ -1,0 +1,47 @@
+# Configuration file for `prek`, a git hook framework written in Rust.
+# See https://prek.j178.dev for more information.
+#:schema https://www.schemastore.org/prek.json
+
+[[repos]]
+repo = "builtin"
+hooks = [
+    { id = "end-of-file-fixer" },
+    { id = "trailing-whitespace" },
+]
+
+[[repos]]
+repo = "https://github.com/biomejs/pre-commit"
+rev = "v2.6.7"
+hooks = [
+    {
+        id = "biome-check",
+        name = "format css, json, yml",
+        files = '\.(css|jsonc?|ya?ml)$',
+        # static/ is published byte for byte, the version payload included
+        exclude = '^(\.config/biome\.jsonc|static/.*)$',
+        args = ["--config-path=.config"],
+    },
+]
+
+[[repos]]
+repo = "https://github.com/tombi-toml/tombi-pre-commit"
+rev = "v1.11.2"
+hooks = [
+    {
+        id = "tombi-format",
+        name = "format toml",
+        args = ["--offline"],
+    },
+]
+
+[[repos]]
+repo = "https://github.com/rvben/rumdl-pre-commit"
+rev = "v0.3.4"
+hooks = [
+    {
+        id = "rumdl",
+        name = "format md",
+        exclude = '^\.github/',
+        args = ["--fix", "--config", ".config/rumdl.toml"],
+    },
+]

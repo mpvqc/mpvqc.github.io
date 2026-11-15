@@ -10,6 +10,14 @@ Open <http://localhost:1313>.
 
 Build the published site with `hugo --minify`.
 
+## Development
+
+You need [just](https://github.com/casey/just), [uv](https://docs.astral.sh/uv/) and [Hugo](https://gohugo.io/).
+
+- `just init`: install the git hooks
+- `just format`: format the repo
+- `just update-git-hook-dependencies`: update the git hooks
+
 ## Version check
 
 Update `static/api/v1/public/version.json` when publishing a release.

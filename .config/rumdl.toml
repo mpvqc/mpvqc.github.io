@@ -1,0 +1,11 @@
+[global]
+flavor = "gfm"
+line-length = 120
+
+# Prose lines stay unwrapped, reflowing would pull Hugo attributes and shortcodes into paragraphs
+[MD013]
+enabled = false
+
+# Headings on the site keep their sentence punctuation
+[MD026]
+punctuation = ""
